@@ -53,11 +53,11 @@ After applying the policy, update Group Policy on target computers (`gpupdate /f
 ## 📦 Build to .exe via PowerShell (optional)
 If you want to get a single executable file, use the PS2EXE utility:
 
-powershell
 Install-Module -Name ps2exe -Force -Scope CurrentUser
-powershell
+
 Invoke-PS2EXE .\ShadowControl.ps1 .\ShadowControl.exe -NoConsole -NoError -IconFile .\icon.ico
-📝 License
+
+## 📝 License
 The project is distributed under the MIT License – you are free to use, modify, and distribute the code.
 
 ## 🤝 Contributing
