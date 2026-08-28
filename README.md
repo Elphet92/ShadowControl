@@ -1,7 +1,5 @@
 # ShadowControl
 
-# ShadowControl
-
 **ShadowControl** is a compact utility for system administrators that simplifies connecting to remote desktops (RDP) in shadow session mode with session control capabilities.
 
 The utility allows you to quickly connect to any computer in the domain, using autocompletion from Active Directory, ICMP (ping) availability check.
