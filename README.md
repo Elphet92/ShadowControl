@@ -1,5 +1,45 @@
 # ShadowControl
 
+**ShadowControl** is a compact utility for system administrators that simplifies connecting to remote desktops (RDP) in shadow session mode with session control capabilities.
+
+The utility allows you to quickly connect to any computer in the domain, using autocompletion from Active Directory, ICMP (ping) availability check.
+
+---
+
+## 📋 Requirements
+
+- Operating system Windows 10 / Windows Server 2016 or higher.
+- Installed `ActiveDirectory` module for computer name autocompletion (optional).
+- Administrator privileges on the target computer for shadow connection.
+- Domain administrator rights to read the computer list from AD (if autocompletion is used).
+
+---
+
+## ⚙️ Group Policy Configuration (GPO)
+
+For the utility to work, you must allow shadow connections **on the target computer**. This is done via local or domain Group Policy.
+
+### GPO Path:
+Computer Configuration → Administrative Templates → Windows Components → Remote Desktop Services → Remote Desktop Session Host → Connections
+
+**Policy:**  
+`Set rules for remote control of Remote Desktop Services user sessions`
+
+**Set to:**  
+`Enabled` → `Full Control without user's permission`
+
+After applying the policy, update Group Policy on target computers (`gpupdate /force`).
+
+---
+
+## 🚀 Usage
+
+1. Download the `ShadowControl.ps1` file or the compiled `.exe`.
+2. Run the script via PowerShell (if running `.ps1`):
+
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File ShadowControl.ps1
+
 **ShadowControl** – это компактная утилита для системных администраторов, которая упрощает подключение к удалённым рабочим столам (RDP) в режиме теневого управления (Shadow Session) с возможностью управления сеансом.
 
 Утилита позволяет быстро подключаться к любому компьютеру в домене, используя автодополнение из Active Directory, проверку доступности по ICMP (ping).
