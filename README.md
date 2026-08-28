@@ -1,5 +1,7 @@
 # ShadowControl
 
+# ShadowControl
+
 **ShadowControl** is a compact utility for system administrators that simplifies connecting to remote desktops (RDP) in shadow session mode with session control capabilities.
 
 The utility allows you to quickly connect to any computer in the domain, using autocompletion from Active Directory, ICMP (ping) availability check.
@@ -39,6 +41,27 @@ After applying the policy, update Group Policy on target computers (`gpupdate /f
 
    ```powershell
    powershell -ExecutionPolicy Bypass -File ShadowControl.ps1
+
+3. Enter the IP address or computer name (AD autocompletion will suggest available domain names).
+
+4. Specify the session ID (usually 1).
+
+5. Select the desired connection options (/control, /multimon, /span, /prompt, ping check).
+
+6. Click "Connect" or press Enter.
+
+## 📦 Build to .exe via PowerShell (optional)
+If you want to get a single executable file, use the PS2EXE utility:
+
+powershell
+Install-Module -Name ps2exe -Force -Scope CurrentUser
+powershell
+Invoke-PS2EXE .\ShadowControl.ps1 .\ShadowControl.exe -NoConsole -NoError -IconFile .\icon.ico
+📝 License
+The project is distributed under the MIT License – you are free to use, modify, and distribute the code.
+
+## 🤝 Contributing
+If you find a bug or want to suggest an improvement – create an Issue or Pull Request. We will be happy to develop the project together!
 
 ---
 
