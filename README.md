@@ -40,6 +40,8 @@ After applying the policy, update Group Policy on target computers (`gpupdate /f
    ```powershell
    powershell -ExecutionPolicy Bypass -File ShadowControl.ps1
 
+---
+
 **ShadowControl** – это компактная утилита для системных администраторов, которая упрощает подключение к удалённым рабочим столам (RDP) в режиме теневого управления (Shadow Session) с возможностью управления сеансом.
 
 Утилита позволяет быстро подключаться к любому компьютеру в домене, используя автодополнение из Active Directory, проверку доступности по ICMP (ping).
