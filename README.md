@@ -50,6 +50,7 @@
 Если вы хотите получить единый исполняемый файл, используйте утилиту PS2EXE:
 
 Install-Module -Name ps2exe -Force -Scope CurrentUser
+
 Invoke-PS2EXE .\ShadowControl.ps1 .\ShadowControl.exe -NoConsole -NoError -IconFile .\icon.ico
 
 ## 📝 Лицензия
