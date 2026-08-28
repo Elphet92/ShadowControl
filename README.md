@@ -40,3 +40,22 @@ text
 2. Запустите скрипт через PowerShell (если запускаете `.ps1`):
    ```powershell
    powershell -ExecutionPolicy Bypass -File ShadowControl.ps1
+Введите IP-адрес или имя компьютера (автодополнение из AD подскажет доступные имена).
+
+Укажите ID сессии (обычно 1).
+
+Выберите нужные параметры подключения (/control, /multimon, /span, /prompt, проверка ping).
+
+Нажмите «Подключиться» или клавишу Enter.
+
+📦 Сборка в .exe (опционально)
+Если вы хотите получить единый исполняемый файл, используйте утилиту PS2EXE:
+
+powershell
+Install-Module -Name ps2exe -Force -Scope CurrentUser
+Invoke-PS2EXE .\ShadowControl.ps1 .\ShadowControl.exe -NoConsole -NoError -IconFile .\icon.ico
+📝 Лицензия
+Проект распространяется под лицензией MIT – вы можете свободно использовать, модифицировать и распространять код.
+
+🤝 Вклад
+Если вы нашли ошибку или хотите предложить улучшение – создавайте Issue или Pull Request. Будем рады развитию проекта вместе!
